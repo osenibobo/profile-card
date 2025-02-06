@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Stage_Zero_Task</title>
+</head>
+<body>
+    <section class="main">  
+        <div class="card">
+            <div class="pic-container">
+                <img src="./img/img.jpg" alt="Profile Picture" data-testid="profilePicture">
+            </div>
+            <div class="profile-details">
+                <h2 data-testid="fullName">John Doe</h2>
+                <h3 data-testid="jobTitle">Frontend Developer</h3>
+                <p data-testid="shortBio">I am a passionate frontend developer with a love for creating interactive and user-friendly web applications. I specialize in HTML, CSS, and JavaScript.</p>
+                <p class="location" data-testid="currentLocation">📍 Lagos, Nigeria</p>
+                <p class="email">📧 <a href="danielodebunmi6@gmail.com" data-testid="emailAddress">danielodebunmi6@gmail.com</a></p>
+                <div class="social-links" data-testid="socialLinks">
+                    <a href="https://github.com/" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com/" target="_blank">Twitter</a>
+                </div>
+                <p class="utc-time">⏰ Current UTC Time: <span id="utc-time" data-testid="currentTimeUTC"></span></p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const utcTime = now.toUTCString();
+            document.getElementById('utc-time').textContent = utcTime;
+        }
+        updateTime();
+    </script>
+</body>
+</html>
